@@ -1,5 +1,5 @@
 // Damaturu
-fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Damaturu&aqi=yes')
+fetch('https://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Damaturu&aqi=yes')
 .then(res=> res.json())
 .then(res =>{
     console.log(res)
@@ -18,7 +18,7 @@ fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf10551925
 })
 
 // Abuja
-fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Abuja&aqi=no')
+fetch('https://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Abuja&aqi=no')
 .then(res=> res.json())
 .then(res =>{
     console.log(res);
@@ -36,7 +36,7 @@ fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf10551925
 })
 
 // Lagos 
-fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Lagos&aqi=no')
+fetch('https://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Lagos&aqi=no')
 .then(res=> res.json())
 .then(res =>{
     console.log(res)
@@ -54,7 +54,7 @@ fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf10551925
 })
 
 // Lagos 
-fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Oshogbo&aqi=yes')
+fetch('https://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Oshogbo&aqi=yes')
 .then(res=> res.json())
 .then(res =>{
     console.log(res)
@@ -72,7 +72,7 @@ fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf10551925
 })
 
 // Kano 
-fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Yola&aqi=yes')
+fetch('https://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Yola&aqi=yes')
 .then(res=> res.json())
 .then(res =>{
     console.log(res)
@@ -90,7 +90,7 @@ fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf10551925
 })
 
 // Portharcourt 
-fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Port Harcourt&aqi=yes')
+fetch('https://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Port Harcourt&aqi=yes')
 .then(res=> res.json())
 .then(res =>{
     console.log(res)
