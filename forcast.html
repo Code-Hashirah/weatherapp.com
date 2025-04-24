@@ -83,96 +83,34 @@
 
     </main>
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title" id="city"></h3>
-                    <img id="img" src="" alt="icon">
-                    <p class="card-text">Condition</p>
-                    <p class="card-text" id="condition"></p>
-                    <p class="card-text">Temperature</p>
-                    <span class="card-text" id="tempC"></span> C
-                    <span class="card-text" id="tempF"></span> F
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title" id="city1"></h3>
-                    <img id="img1" src="" alt="icon">
-                    <p class="card-text">Condition</p>
-                    <p class="card-text" id="condition1"></p>
-                    <p class="card-text">Temperature</p>
-                    <span class="card-text" id="tempC1"></span> C
-                    <span class="card-text" id="tempF1"></span> F
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title" id="city2"></h3>
-                    <img id="img2" src="" alt="icon">
-                    <p class="card-text">Condition</p>
-                    <p class="card-text" id="condition2"></p>
-                    <p class="card-text">Temperature</p>
-                    <span class="card-text" id="tempC2"></span> C
-                    <span class="card-text" id="tempF2"></span> F
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title" id="city3"></h3>
-                    <img id="img3" src="" alt="icon">
-                    <p class="card-text">Condition</p>
-                    <p class="card-text" id="condition3"></p>
-                    <p class="card-text">Temperature</p>
-                    <span class="card-text" id="tempC3"></span> C
-                    <span class="card-text" id="tempF3"></span> F
-                </div>
-            </div>
-        </div>
-<!-- --------------Kano -------------->
-        <div class="col-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title" id="city4"></h3>
-                    <img id="img4" src="" alt="icon">
-                    <p class="card-text">Condition</p>
-                    <p class="card-text" id="condition4"></p>
-                    <p class="card-text">Temperature</p>
-                    <span class="card-text" id="tempC4"></span> C
-                    <span class="card-text" id="tempF4"></span> F
-                </div>
-            </div>
-        </div>
-
-        <!-- -------------Portharcourt -->
-        <div class="col-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title" id="city5"></h3>
-                    <img id="img5" src="" alt="icon">
-                    <p class="card-text">Condition</p>
-                    <p class="card-text" id="condition5"></p>
-                    <p class="card-text">Temperature</p>
-                    <span class="card-text" id="tempC5"></span> C
-                    <span class="card-text" id="tempF5"></span> F
-                </div>
+    <div class="btn-group-vertical" role="group" aria-label="">
+        <button type="button" class="btn btn-secondary" onclick="showCaption(this)">Damaturu</button>
+        <button type="button" class="btn btn-secondary" onclick="showCaption(this)">Lagos</button>
+        <div class="btn-group" role="group">
+            <button
+                id="dropdownId"
+                type="button"
+                class="btn btn-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+            >
+                More
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <button type="button" class="btn btn-secondary" onclick="showCaption(this)">Yola</button>
+                <button type="button" class="btn btn-secondary" onclick="showCaption(this)">Abuja</button>
+                <button type="button" class="btn btn-secondary" onclick="showCaption(this)">Oshogbo</button>
+                <button type="button" class="btn btn-secondary" onclick="showCaption(this)">Kano</button>
+                <button type="button" class="btn btn-secondary" onclick="showCaption(this)">Port Harcourt</button>
             </div>
         </div>
     </div>
     
-    <footer class="">
 
-    </footer>
+    <div class="row" id="div4">
+        
+
     <script src="forecast.js"></script>
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
 </body>

@@ -53,7 +53,7 @@ fetch('http://api.weatherapi.com/v1/astronomy.json?key=c900f9d4689c4f91acf105519
     document.getElementById('tempF2').innerHTML=tempF2;
 })
 
-// Lagos 
+// Oshogbo
 fetch('http://api.weatherapi.com/v1/astronomy.json?key=c900f9d4689c4f91acf105519252004&q=Oshogbo&aqi=yes')
 .then(res=> res.json())
 .then(res =>{

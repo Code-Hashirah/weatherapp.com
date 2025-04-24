@@ -1,30 +1,69 @@
-// Damaturu
-fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Damaturu&aqi=yes')
+// Damaturu 
+function showCaption(button) {
+    let town=button.innerText;
+    alert("Weather for: " + button.innerText);
+//   }
+
+fetch(`https://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=${town}&aqi=yes`)
 .then(res=> res.json())
 .then(res =>{
-    // console.log(res.forecast)
-    console.log(res.forecast.forecastday[0].hour[3])
+console.log(res);
     let forecasts=[];
     forecasts[0]=res.forecast.forecastday[0];
-    console.log(forecasts[0].hour[0].condition)
+    // console.log(forecasts[0].hour[0].condition)
+    let div4=document.getElementById('div4');
+    div4.setAttribute('class','w-100 row ps-4');
+    // looping through arrays to fetch data 
     for(let i=0; i<24; i++){
-        console.log("here = "+ JSON.stringify(forecasts[0].hour[i].condition));
+        
+        let wForeCast=forecasts[0].hour[i];
+        console.log(JSON.stringify(wForeCast))
+        let condition=wForeCast.condition.text;
+        let img=wForeCast.condition.icon;;
+        let city=wForeCast.city;
+        let time=wForeCast.time;
+        let tempC=wForeCast.temp_c;
+        let humidity=wForeCast.humidity;
+
+        let div1=document.createElement('div');
+        div1.setAttribute('class', 'col-md-4')
+        // creating elements 
+        let hTag=document.createElement('h3');
+        let pTagTime=document.createElement('p');
+        let pTagTemp=document.createElement('p');
+        let pTagHum=document.createElement('p');
+        let imgTag=document.createElement('img');
+
+        // setting values 
+        hTag.innerHTML=condition;
+        pTagTime.innerHTML=time;
+        pTagTemp.innerHTML="Temperature is "+ tempC +" Celsius";
+        pTagHum.innerHTML="Humidity is " +humidity;
+        imgTag.src=img;
+
+        // setting the attributes 
+        hTag.setAttribute('class', 'card-title');
+        pTagTime.setAttribute('class', 'card-text');
+        pTagTemp.setAttribute('class', 'card-text');
+        pTagHum.setAttribute('class', 'card-text')
+        imgTag.setAttribute('class','img');
+        
+       
+        // appending the elements 
+        div1.append(imgTag);
+        div1.append(hTag);
+        div1.append(pTagTime);
+        div1.append(pTagTemp);
+        div1.append(pTagHum);
+        div4.append(div1);
     }
-    let condition=res;
-    let img=res.current.condition.icon;
-    let city=res;
-    let country=res.location.country;
-    let tempC=res.current.feelslike_c;
-    let tempF=res.current.feelslike_f;
-    document.getElementById('condition').innerHTML=condition;
-    document.getElementById('city').innerHTML=city;
-    document.getElementById('img').src=img;
-    document.getElementById('tempC').innerHTML=tempC;
-    document.getElementById('tempF').innerHTML=tempF;
+        
 })
 
+}
+alert("Hey the Listener, This is a real thing")
 // Abuja
-// fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Abuja&aqi=no')
+// fetch('https://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Abuja&aqi=no')
 // .then(res=> res.json())
 // .then(res =>{
 //     console.log(res);
@@ -42,7 +81,7 @@ fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf1055192
 // })
 
 // Lagos 
-// fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Lagos&aqi=no')
+// fetch('https://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Lagos&aqi=no')
 // .then(res=> res.json())
 // .then(res =>{
 //     console.log(res)
@@ -60,7 +99,7 @@ fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf1055192
 // })
 
 // Lagos 
-// fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Oshogbo&aqi=yes')
+// fetch('https://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Oshogbo&aqi=yes')
 // .then(res=> res.json())
 // .then(res =>{
 //     console.log(res)
@@ -78,7 +117,7 @@ fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf1055192
 // })
 
 // Kano 
-// fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Yola&aqi=yes')
+// fetch('https://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Yola&aqi=yes')
 // .then(res=> res.json())
 // .then(res =>{
 //     console.log(res)
@@ -96,7 +135,7 @@ fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf1055192
 // })
 
 // Portharcourt 
-// fetch('http://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Port Harcourt&aqi=yes')
+// fetch('https://api.weatherapi.com/v1/forecast.json?key=c900f9d4689c4f91acf105519252004&q=Port Harcourt&aqi=yes')
 // .then(res=> res.json())
 // .then(res =>{
 //     console.log(res)
