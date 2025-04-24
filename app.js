@@ -1,5 +1,5 @@
 // Damaturu
-fetch('http://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Damaturu&aqi=yes')
+fetch('https://api.weatherapi.com/v1/current.json?key=c900f9d4689c4f91acf105519252004&q=Damaturu&aqi=yes')
 .then(res=> res.json())
 .then(res =>{
     console.log(res)
